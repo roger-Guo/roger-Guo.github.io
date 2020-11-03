@@ -8,8 +8,8 @@ var WINDOW_WIDTH,
 
 var balls = [];
 var colors = ['#CC543A', '#FB966E', '#F05E1C', '#FFB11B', '#DDD23B', '#91B493', '#86C166', '#66BAB7', '#7B90D2', '#B28FCE'];
-
-var currentShowTimeSeconds = getTimeRemaining(new Date(), new Date("2022-02-22 00:00:00"));
+console.log("moment----- ", moment());
+var currentShowTimeSeconds = getTimeRemaining(new Date(), moment("2022-02-22 00:00:00").valueOf());
 
 window.onload = function () {
     // self responsive
@@ -27,12 +27,10 @@ window.onload = function () {
     canvas.width = WINDOW_WIDTH;
     canvas.height = WINDOW_HEIGHT;
 
-    setTimeout(() => {
-        var myInterval = setInterval(function () {
-            render(context);
-            update();
-        }, 50);
-    }, 1000);
+    var myInterval = setInterval(function () {
+        render(context);
+        update();
+    }, 50);
 }
 
 function render (ctx) {
@@ -78,7 +76,7 @@ function getCurrentShowTimeSeconds () {
 }
 
 function update () {
-    var nextShowTimeSeconds = getTimeRemaining(new Date(), new Date("2022-02-22 00:00:00"));
+    var nextShowTimeSeconds = getTimeRemaining(new Date(), moment("2022-02-22 00:00:00").valueOf());
 
     var nextdays = nextShowTimeSeconds.days;
     var nexthours = nextShowTimeSeconds.hours;
@@ -179,7 +177,7 @@ function updateBalls () {
 }
 
 function getTimeRemaining(startTime, endTime = new Date()) {
-  var t = Date.parse(endTime) - Date.parse(startTime);
+  var t =  (typeof endTime !== "number" ? Date.parse(endTime) : endTime) - Date.parse(startTime);
   var seconds = Math.floor((t / 1000) % 60);
   var minutes = Math.floor((t / 1000 / 60) % 60);
   var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
