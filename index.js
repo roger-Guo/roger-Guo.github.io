@@ -13,8 +13,8 @@ var currentShowTimeSeconds = getTimeRemaining(new Date(), new Date("2022-02-22 0
 
 window.onload = function () {
     // self responsive
-    WINDOW_WIDTH = window.innerWidth;
-    WINDOW_HEIGHT = window.innerHeight;
+    WINDOW_WIDTH = window.innerWidth || 1000;
+    WINDOW_HEIGHT = window.innerHeight || 1000;
     MARGIN_LEFT = Math.round(WINDOW_WIDTH / 25);
     MARGIN_TOP = Math.round(WINDOW_HEIGHT / 5);
     RADIUS = (Math.round(WINDOW_WIDTH * 4 / 5 / 108) - 1) * 0.75;
