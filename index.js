@@ -27,10 +27,12 @@ window.onload = function () {
     canvas.width = WINDOW_WIDTH;
     canvas.height = WINDOW_HEIGHT;
 
-    var myInterval = setInterval(function () {
-        render(context);
-        update();
-    }, 50);
+    setTimeout(() => {
+        var myInterval = setInterval(function () {
+            render(context);
+            update();
+        }, 50);
+    }, 1000);
 }
 
 function render (ctx) {
