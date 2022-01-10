@@ -1,5 +1,4 @@
-var myAudioElement = document.getElementById('audio');  
-myAudioElement.addEventListener("canplay", event => {
-  /* the audio is now playable; play it if permissions allow */
+setTimeont(() => {
+  var myAudioElement = document.getElementById('audio');  
   myAudioElement.play();
-});
+}, 3000)
