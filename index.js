@@ -9,7 +9,7 @@ var WINDOW_WIDTH,
 var balls = [];
 var colors = ['#CC543A', '#FB966E', '#F05E1C', '#FFB11B', '#DDD23B', '#91B493', '#86C166', '#66BAB7', '#7B90D2', '#B28FCE'];
 console.log("moment----- ", moment());
-var currentShowTimeSeconds = getTimeRemaining(new Date(), moment("2022-02-22 00:00:00").valueOf());
+var currentShowTimeSeconds = getTimeRemaining(new Date(), moment("2022-10-01 00:00:00").valueOf());
 
 window.onload = function () {
     // self responsive
@@ -76,7 +76,7 @@ function getCurrentShowTimeSeconds () {
 }
 
 function update () {
-    var nextShowTimeSeconds = getTimeRemaining(new Date(), moment("2022-02-22 00:00:00").valueOf());
+    var nextShowTimeSeconds = getTimeRemaining(new Date(), moment("2022-10-01 00:00:00").valueOf());
 
     var nextdays = nextShowTimeSeconds.days;
     var nexthours = nextShowTimeSeconds.hours;
