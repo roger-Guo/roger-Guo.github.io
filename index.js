@@ -16,7 +16,7 @@ window.onload = function () {
     WINDOW_HEIGHT = window.innerHeight || 1000;
     RADIUS = (Math.round(WINDOW_WIDTH * 4 / 5 / 108) - 1) * 0.75;
     MARGIN_LEFT = Math.round(WINDOW_WIDTH / 25);
-    MARGIN_TOP = Math.round(WINDOW_HEIGHT / 6) - 2 * 5 * (RADIUS+1);
+    MARGIN_TOP = Math.round(WINDOW_HEIGHT / 10) - 2 * 5 * (RADIUS+1);
     console.log(WINDOW_WIDTH, WINDOW_HEIGHT, MARGIN_TOP, RADIUS);
     Heart_SIZE = 0.42;
 
